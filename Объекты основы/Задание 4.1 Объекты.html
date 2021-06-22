@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="" content="">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+    /*
+      Привет, object
+      Напишите код, выполнив задание из каждого пункта отдельной строкой:
+      
+      Создайте пустой объект user.
+      Добавьте свойство name со значением John.
+      Добавьте свойство surname со значением Smith.
+      Измените значение свойства name на Pete.
+      Удалите свойство name из объекта.
+      */
+      /*
+      let user = {};
+      user.name = "Jonh";
+      user.surname = "Smith";
+      user.name = "Pete";
+      delete user.name;
+      for ( let key in user ){
+        
+        alert ( key + ' ' + user[key]);
+        
+      }
+      */
+      
+      
+      /*
+      Проверка на пустоту
+      Напишите функцию isEmpty(obj), которая возвращает true, если у объекта нет свойств, иначе false.
+      
+      Должно работать так:
+      */
+      /*
+      function isEmpty(obj){
+        
+        for ( let key in obj ){
+          return false;
+        }
+        return true;
+      }
+      let schedule = {};
+      
+      alert( isEmpty(schedule) ); // true
+      
+      schedule["8:30"] = "get up";
+      
+      alert( isEmpty(schedule) ); // false
+      */
+      
+      
+      /*
+      Объекты-константы?
+      Можно ли изменить объект, объявленный с помощью const? Как вы думаете?
+      */
+      /*
+      const user = {
+        name: "John"
+      };
+      
+      // это будет работать?
+      user.name = "Pete";
+      /*
+      Конечно, это сработает без проблем.
+      Объявление const защищает только саму переменную от изменений.
+      Другими словами, user хранит ссылку на объект. И это не может быть изменено. Но содержимое объекта менять можно.
+      *//*
+      const user = {
+        name: "John"
+      };
+      
+      // Работает!
+      user.name = "Pete";
+      
+      // Ошибка
+      user = 123;
+      */
+      
+      
+      /*
+      Сумма свойств объекта
+      У нас есть объект, в котором хранятся зарплаты нашей команды:
+      */
+      /*
+      function isEmpty(obj){
+        let sum = 0;
+        for ( let key in obj ){
+          sum += obj[key];
+        }
+        return sum;
+      }
+      */
+      /*
+      let salaries = {
+        John: 100,
+        Ann: 160,
+        Pete: 130
+      }
+      */
+      /*
+     let salaries = {}
+      
+      alert ( isEmpty(salaries) );
+      */
+      /*
+      Напишите код для суммирования всех зарплат и сохраните результат в переменной sum. Должно получиться 390.
+      
+      Если объект salaries пуст, то результат должен быть 0.
+      */
+      
+      
+      /*
+      Умножаем все числовые свойства на 2
+      Создайте функцию multiplyNumeric(obj), которая умножает все числовые свойства объекта obj на 2.
+      
+      Например:
+      */
+      // до вызова функции
+/*
+      function multiplyNumeric(obj){
+        
+        for ( let key in obj ){
+          if ( typeof obj[key] == "number" ){
+            obj[key] *= 2;
+          }
+          
+        }
+        
+      }
+      let menu = {
+        width: 200,
+        height: 300,
+        title: "My menu"
+      };
+      
+      multiplyNumeric(menu);
+      
+      for ( let key in menu ){
+          alert ( menu[key] );
+        }
+      
+      // после вызова функции
+      /*
+      menu = {
+        width: 400,
+        height: 600,
+        title: "My menu"
+      };
+      Обратите внимание, что multiplyNumeric не нужно ничего возвращать. Следует напрямую изменять объект.
+      
+      P.S. Используйте typeof для проверки, что значение свойства числовое.
+      */
+    </script>
+  </body>
+</html>
