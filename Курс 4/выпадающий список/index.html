@@ -1,0 +1,38 @@
+<!--Сообщаем браузеру как стоит обрабатывать эту страницу-->
+<!doctype html>
+<!--Оболочка документа, указываем язык содержимого-->
+<html lang="ru">
+<!--Заголовок страницы, контейнера для других важных данных (не отображается)-->
+
+<head>
+    <!--Заголовок страницы в браузере-->
+    <title>Выпадающий список</title>
+    <!-- Адаптив -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Подключаем CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--Кодировка страницы-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<!--Отображаемое тело страницы-->
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <select onchange="backgroundChange(this.value)" id="select">
+                <option disabled>Выбери погоду</option>
+                <option value="Солнце +35">Солнце +35</option>
+                <option value="Солнце +15">Солнце +15</option>
+                <option value="Дождь">Дождь</option>
+                <option value="Снег">Снег</option>
+            </select>
+            <div class="image">
+                <img id='image' src="" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Подключаем файл JS скриптов -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>declaration, expression, local, global, return</title>
+</head>
+
+<body onload="funcExpression(user)">
+    <div class="block-1">
+        <label for="declaration">Declaration</label>
+        <button name="declaration" onclick="funcDeclaration();">кнопка</button>
+    </div>
+
+    <div class="block-2">
+        <label for="openWindow">Открыть новую вкладку</label>
+        <input id="url_text" type="text" placeholder="Введите url">
+        <button name="openWindow" onclick="openWindow(document.querySelector('#url_text').value)">Кнопка</button>
+    </div>
+
+    <div class="block-3">
+        <label for="creator">Если есть претензии пишите этому человеку</label>
+        <button name="creator" onclick="creator()">Перейти</button>
+    </div>
+
+    <div class="block-4">
+        <label for="creator">Хочешь посмотреть код JS? Нажми на кнопку ниже</label>
+        <button onclick="outputJS()">JS код</button>
+    </div>
+
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
